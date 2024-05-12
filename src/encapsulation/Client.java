@@ -9,6 +9,10 @@ public class Client {
 
         Lecture lecture1 = new Lecture();
         Lecture lecture2 = new Lecture("Java", "Jagrati", new Date(), "Inprogress");
+        Lecture lecture4 = new Lecture("Java", "Jagrati", new Date(), "Inprogress");
+
+        System.out.println(lecture2.equals(lecture4));
+
         Lecture lecture3 = new Lecture("Java-OOPS");
 
         lecture1.setMentor("Yukta");
