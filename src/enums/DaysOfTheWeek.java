@@ -1,9 +1,6 @@
 package enums;
 
-import abstractionViaAbstractClass.Shape;
-import abstractionViaInterface.Animal;
-
-public enum DaysOfTheWeek implements Animal {
+public enum DaysOfTheWeek {
 
     WEDNESDAY("wed", 4), //0
     SUNDAY("sun", 1), //1
@@ -35,8 +32,4 @@ public enum DaysOfTheWeek implements Animal {
         return day;
     }
 
-    @Override
-    public void animalSound() {
-
-    }
 }

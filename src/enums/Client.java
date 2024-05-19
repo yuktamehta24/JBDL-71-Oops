@@ -26,7 +26,6 @@ public class Client {
             System.out.println(dayOfTheWeek.getDay());
             System.out.println(dayOfTheWeek.getShortName());
             System.out.println(dayOfTheWeek.ordinal());
-            dayOfTheWeek.sleep();
         };
 
         DaysOfTheWeek d = DaysOfTheWeek.valueOf("fghjsdf");
