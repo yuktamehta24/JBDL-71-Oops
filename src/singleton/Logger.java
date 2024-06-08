@@ -2,7 +2,7 @@ package singleton;
 
 public final class Logger {
 
-    // early initialization
+// early initialization
 //    private static Logger logger = new Logger();  //early
     private static Logger logger;  //lazy
 
@@ -15,10 +15,33 @@ public final class Logger {
 //    }
 
     // lazy initialization
+
+//    public synchronized static Logger getLoggerInstance() {
+//        if (logger == null) {
+//            System.out.println("Logger is getting initialised");
+//            logger = new Logger();
+//        }
+//        return logger;
+//    }
+
+//    public static Logger getLoggerInstance() {
+//        if (logger == null) {
+//            System.out.println("Logger is getting initialised");
+//            synchronized (Logger.class) {
+//                logger = new Logger();
+//            }
+//        }
+//        return logger;
+//    }
+
     public static Logger getLoggerInstance() {
         if (logger == null) {
             System.out.println("Logger is getting initialised");
-            logger = new Logger();
+            synchronized (Logger.class) {
+                if (logger == null) {
+                    logger = new Logger();
+                }
+            }
         }
         return logger;
     }
